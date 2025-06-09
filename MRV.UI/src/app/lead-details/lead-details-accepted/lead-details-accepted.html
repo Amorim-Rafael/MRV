@@ -1,0 +1,30 @@
+<h3>Accepted</h3>
+<div class="row">
+    <ul class="list-group">
+        <li *ngFor="let l of service.listLeadsAccepted">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{l.firstName}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">{{l.dateCreated | date : 'dd/MM/yyyy HH:mm'}}
+                    </h6>
+                    <p class="card-text">
+                        <i class="fa-solid fa-location-dot"></i>
+                        {{l.suburb}}&nbsp;&nbsp;
+                        <i class="fa-solid fa-suitcase"></i>
+                        {{l.category}}&nbsp;&nbsp;
+                        Job ID:
+                        {{l.id}}&nbsp;&nbsp;
+                        {{l.price | currency}} Lead invitation
+                    </p>
+                    <hr class="bg-danger border-2 border-top border-dark" />
+                    <p class="card-text">
+                        <i class="fa-solid fa-phone"></i>
+                        {{l.phoneNumber}}&nbsp;&nbsp;
+                        <i class="fa-solid fa-envelope"></i>
+                        {{l.email}}
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

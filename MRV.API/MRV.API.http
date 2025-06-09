@@ -1,0 +1,6 @@
+@MRV.API_HostAddress = http://localhost:5147
+
+GET {{MRV.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
